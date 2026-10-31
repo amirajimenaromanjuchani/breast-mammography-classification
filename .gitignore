@@ -1,0 +1,28 @@
+# DATOS Y SECRETOS: NUNCA a GitHub
+data/
+*.dcm
+dataset_final_v2.csv
+clave_identificacion.csv
+indice_*.csv
+resumen_estudios.csv
+.env
+*token*
+
+# Modelos y resultados pesados
+results/checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.pkl
+
+# Python / Colab
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+venv/
+.venv/
+
+# Sistema
+.DS_Store
+Thumbs.db
