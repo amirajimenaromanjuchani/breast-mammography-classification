@@ -1,0 +1,134 @@
+{
+  "fecha": "2026-11-03 15:23:14.935244",
+  "commit_repo": "941f6a79ac2bdfadd9b67b231367ff85cc4db744",
+  "python": "3.13.16",
+  "torch": "2.11.0+cu130",
+  "torchvision": "0.26.0+cu130",
+  "sklearn": "1.6.1",
+  "numpy": "2.4.6",
+  "pandas": "2.2.3",
+  "gpu": "Tesla T4",
+  "amp_fp16": true,
+  "determinista": "use_deterministic_algorithms(warn_only=True), cudnn.benchmark=False",
+  "pesos_preentrenados": "torchvision weights='DEFAULT' (ImageNet)",
+  "semillas_particion": [
+    42,
+    43,
+    44
+  ],
+  "semilla_entrenamiento": 123,
+  "corridas_en_esta_ejecucion": [
+    42
+  ],
+  "config": {
+    "paths": {
+      "png_root": "/content/drive/MyDrive/tesis-cnn/mammo-tesis/png_2d",
+      "dataset_csv": "/content/drive/MyDrive/tesis-cnn/mammo-tesis/png_2d/dataset_final_v1.csv",
+      "splits_publico": "splits/splits_publico.csv",
+      "checkpoints": "/content/drive/MyDrive/tesis-cnn/mammo-tesis/resultados/checkpoints",
+      "tablas": "/content/drive/MyDrive/tesis-cnn/mammo-tesis/resultados/tablas",
+      "figuras": "/content/drive/MyDrive/tesis-cnn/mammo-tesis/resultados/figuras",
+      "resultados": "/content/drive/MyDrive/tesis-cnn/mammo-tesis/resultados"
+    },
+    "clases": {
+      "benigna": 0,
+      "alta_sospecha": 1
+    },
+    "birads": {
+      "benigna": [
+        2
+      ],
+      "alta_sospecha": [
+        4,
+        5
+      ],
+      "excluidos": [
+        0,
+        1,
+        3,
+        6
+      ]
+    },
+    "imagen": {
+      "alto": 1024,
+      "ancho": 768,
+      "bits_en_disco": 8,
+      "canales_en_disco": 1,
+      "canales_modelo": 3,
+      "normalizacion": {
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ]
+      },
+      "alto_entrada": 512,
+      "ancho_entrada": 384
+    },
+    "validacion_cruzada": {
+      "n_pliegues": 5,
+      "semillas": [
+        42,
+        43,
+        44
+      ],
+      "semillas_iniciales": [
+        42
+      ],
+      "columna_pliegue": "fold_seed{semilla}",
+      "unidad": "paciente"
+    },
+    "modelos": [
+      "resnet50",
+      "densenet121",
+      "efficientnet_b4"
+    ],
+    "entrenamiento": {
+      "epocas_max": 100,
+      "paciencia": 10,
+      "optimizador": "adam",
+      "lr": 0.0001,
+      "weight_decay": 1e-05,
+      "batch_size": 8,
+      "lote_pacientes": 2,
+      "fase1_epocas": 3,
+      "lr_cabeza": 0.001,
+      "semilla": 123
+    },
+    "aumento_datos": {
+      "rotacion_grados": 10,
+      "traslacion_max_frac": 0.05,
+      "escala": [
+        0.9,
+        1.1
+      ],
+      "brillo_contraste_frac": 0.1,
+      "volteo_horizontal": false,
+      "volteo_vertical": false,
+      "smote": false,
+      "cutmix": false,
+      "mixup": false
+    },
+    "desbalance": {
+      "estrategia": "sobremuestreo_por_clase",
+      "solo_entrenamiento": true
+    },
+    "evaluacion": {
+      "nivel": "paciente",
+      "metricas": [
+        "auc_roc",
+        "sensibilidad",
+        "especificidad",
+        "f1"
+      ],
+      "bootstrap_n": 2000,
+      "bootstrap_unidad": "paciente",
+      "umbral": "se elige en el pliegue de validaci\u00f3n, nunca en el de prueba"
+    }
+  }
+}

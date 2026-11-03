@@ -1,0 +1,5 @@
+comparacion,modelo,n_pos,n_neg,auc,ic95_inf,ic95_sup,ic_excluye_0
+BI-RADS 4 vs 2,efficientnet_b4,45.0,311.0,0.784,0.707,0.852,
+BI-RADS 5 vs 2,efficientnet_b4,15.0,311.0,0.934,0.865,0.981,
+BI-RADS 4 vs 5 (positiva = 5),efficientnet_b4,15.0,45.0,0.773,0.624,0.899,
+Diferencia AUC(4v2) - AUC(5v2),efficientnet_b4,,,-0.15,-0.241,-0.054,True

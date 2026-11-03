@@ -1,0 +1,4 @@
+a,b,auc_a,auc_b,dif,p,p_holm
+resnet50,densenet121,0.7546,0.796,-0.0415,0.1666,0.3333
+resnet50,efficientnet_b4,0.7546,0.8218,-0.0672,0.0029,0.0087
+densenet121,efficientnet_b4,0.796,0.8218,-0.0257,0.4368,0.4368

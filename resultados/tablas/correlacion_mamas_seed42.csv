@@ -1,0 +1,10 @@
+arquitectura,grupo,n,r,ic95_inf,ic95_sup,p_valor
+resnet50,todas,371,0.219,0.12,0.314,0.0
+resnet50,solo benignas (BI-RADS 2),311,0.395,0.297,0.485,0.0
+resnet50,solo alta sospecha (4-5),60,-0.182,-0.417,0.075,0.164
+densenet121,todas,371,0.228,0.129,0.323,0.0
+densenet121,solo benignas (BI-RADS 2),311,0.357,0.256,0.45,0.0
+densenet121,solo alta sospecha (4-5),60,-0.095,-0.34,0.163,0.472
+efficientnet_b4,todas,371,0.312,0.217,0.401,0.0
+efficientnet_b4,solo benignas (BI-RADS 2),311,0.441,0.347,0.527,0.0
+efficientnet_b4,solo alta sospecha (4-5),60,-0.098,-0.343,0.16,0.457

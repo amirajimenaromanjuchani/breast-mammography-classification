@@ -1,0 +1,10 @@
+arquitectura,agregacion,auc
+resnet50,media de probabilidades (primaria),0.755
+resnet50,sigmoide de la media de logits,0.739
+resnet50,máximo de las dos mamas,0.77
+densenet121,media de probabilidades (primaria),0.796
+densenet121,sigmoide de la media de logits,0.787
+densenet121,máximo de las dos mamas,0.793
+efficientnet_b4,media de probabilidades (primaria),0.822
+efficientnet_b4,sigmoide de la media de logits,0.748
+efficientnet_b4,máximo de las dos mamas,0.839
