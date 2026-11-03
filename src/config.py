@@ -14,7 +14,7 @@ DRIVE_ROOT = Path("/content/drive/MyDrive/tesis-cnn/mammo-tesis")
 CONFIG = {
     "paths": {
         "png_root": DRIVE_ROOT / "png_2d",
-        "dataset_csv": DRIVE_ROOT / "png_2d" / "dataset_final_v2.csv",  # PRIVADO (no va a GitHub)
+        "dataset_csv": DRIVE_ROOT / "png_2d" / "dataset_final_v1.csv",  # PRIVADO (no va a GitHub)
         "splits_publico": "splits/splits_publico.csv",                  # público (en el repositorio)
         "checkpoints": DRIVE_ROOT / "resultados" / "checkpoints",
         "tablas": DRIVE_ROOT / "resultados" / "tablas",
