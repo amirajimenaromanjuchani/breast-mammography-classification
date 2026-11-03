@@ -9,7 +9,7 @@ resultados de prueba).
 from pathlib import Path
 
 # Carpeta del proyecto en Google Drive (AJUSTAR a tu ruta real)
-DRIVE_ROOT = Path("/content/drive/MyDrive/tesis_mamografias")
+DRIVE_ROOT = Path("/content/drive/MyDrive/tesis-cnn/mammo-tesis")
 
 CONFIG = {
     "paths": {
